@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Streaming Search</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        
+        <h1>Search songs with Deezer</h1>
+       
+      </section>
+
+      <section class="panel">
+        <form id="search-form" class="search-bar">
+          <input
+            id="query"
+            name="query"
+            type="text"
+            placeholder="Try: daft punk, coldplay, adele..."
+            value="daft punk"
+          />
+          <button type="submit">Search</button>
+        </form>
+
+        <p id="status" class="status">Loading results...</p>
+        <section id="results" class="results"></section>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

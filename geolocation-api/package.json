@@ -1,0 +1,10 @@
+{
+  "name": "geolocation-api",
+  "version": "1.0.0",
+  "description": "Mini project that consumes Open-Meteo geolocation and forecast APIs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "license": "MIT"
+}

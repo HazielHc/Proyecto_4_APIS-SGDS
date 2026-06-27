@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NASA APOD</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        
+        <h1>NASA Astronomy Picture of the Day</h1>
+        
+      </section>
+
+      <section class="panel">
+        <form id="date-form" class="date-bar">
+          <label for="date">Date</label>
+          <input id="date" name="date" type="date" />
+          <button type="submit">Load APOD</button>
+        </form>
+
+        <p id="status" class="status">Loading APOD...</p>
+        <section id="result" class="result"></section>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

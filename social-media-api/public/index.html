@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Media API</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        
+        <h1>Browse DEV.to posts by tag</h1>
+        
+      </section>
+
+      <section class="panel">
+        <form id="search-form" class="search-bar">
+          <input id="tag" name="tag" type="text" value="javascript" placeholder="Try: react, css, node" />
+          <button type="submit">Load articles</button>
+        </form>
+
+        <p id="status" class="status">Loading articles...</p>
+        <section id="results" class="results"></section>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geolocation API</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+       
+        <h1>Check weather by city</h1>
+       
+      </section>
+
+      <section class="panel">
+        <form id="search-form" class="search-bar">
+          <input id="city" name="city" type="text" value="Monterrey" placeholder="Try: Mexico City, Madrid, Tokyo" />
+          <button type="submit">Check weather</button>
+        </form>
+
+        <p id="status" class="status">Loading weather...</p>
+        <section id="result" class="result"></section>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
