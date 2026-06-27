@@ -1,68 +1,202 @@
 # API Integration and Service Architecture
 
-This repository contains 4 independent mini projects. Each one consumes a different public API category required by the assignment.
+This repository contains four independent mini projects built with Node.js. Each project consumes a different external API and covers one of the categories required by the assignment: Streaming, Social Media, Open Data, and Geolocation.
 
-## Projects
+## Project Objective
 
-1. `streaming-api`
-   - Category: Streaming
-   - API: Deezer API
-   - Function: Runs a local web app that searches songs by artist or keyword.
+The goal of this repository is to demonstrate:
 
-2. `social-media-api`
-   - Category: Social Media
-   - API: DEV.to API
-   - Function: Runs a local web app that shows recent articles for a tag.
+- Consumption of external web services
+- Handling of asynchronous API requests with JavaScript
+- Clear project organization
+- Separation of responsibilities across four independent solutions
 
-3. `open-data-api`
-   - Category: Databases / Open Data
-   - API: NASA APOD API
-   - Function: Runs a local web app that shows Astronomy Picture of the Day information.
+## Technologies Used
 
-4. `geolocation-api`
-   - Category: Geolocation
-   - API: Open-Meteo Geocoding + Forecast APIs
-   - Function: Runs a local web app that looks up a city and shows current weather data.
+- Node.js 18+
+- Native `fetch`
+- HTML, CSS, and JavaScript
+- Public REST APIs
 
-## Requirements
+No external npm dependencies are required.
 
-- Node.js 18 or newer
+## Included Projects
 
-## How to run
+### 1. `streaming-api`
 
-Each project is independent. Open a terminal inside the desired folder and run:
+- Category: Streaming
+- API used: Deezer API
+- Main purpose: Search songs by artist or keyword
+- Local URL: `http://localhost:3000`
+- Main endpoint consumed:
+  - `https://api.deezer.com/search?q={query}`
 
-```bash
-npm start
-```
+This mini project displays:
 
-Then open these local URLs:
+- Song title
+- Artist name
+- Album name
+- Album cover
+- Direct Deezer link
+- 30-second preview when available
 
-```bash
-cd streaming-api
-http://localhost:3000
+### 2. `social-media-api`
 
-cd social-media-api
-http://localhost:3001
+- Category: Social Media
+- API used: DEV.to API
+- Main purpose: Search recent articles by tag
+- Local URL: `http://localhost:3001`
+- Main endpoint consumed:
+  - `https://dev.to/api/articles?per_page=6&tag={tag}`
 
-cd open-data-api
-http://localhost:3002
+This mini project displays:
 
-cd geolocation-api
-http://localhost:3003
-```
+- Article title
+- Author
+- Publish date
+- Estimated reading time
+- Description
+- Tags
+- Link to the original article
 
-## Installation
+### 3. `open-data-api`
 
-No external packages are required. The projects use the native `fetch` available in Node.js 18+.
+- Category: Databases / Open Data
+- API used: NASA APOD API
+- Main purpose: Show Astronomy Picture of the Day
+- Local URL: `http://localhost:3002`
+- Main endpoint consumed:
+  - `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`
 
-## Folder structure
+This mini project displays:
+
+- APOD title
+- Date
+- Media type
+- Official NASA image or media link
+- Explanation of the selected content
+
+### 4. `geolocation-api`
+
+- Category: Geolocation
+- APIs used:
+  - Open-Meteo Geocoding API
+  - Open-Meteo Forecast API
+- Main purpose: Search a city and display current weather data
+- Local URL: `http://localhost:3003`
+- Main endpoints consumed:
+  - `https://geocoding-api.open-meteo.com/v1/search?name={city}`
+  - `https://api.open-meteo.com/v1/forecast?...`
+
+This mini project displays:
+
+- City name
+- Country
+- Latitude and longitude
+- Current temperature
+- Apparent temperature
+- Wind speed
+- Local time
+- Time zone
+
+## Repository Structure
 
 ```text
-/
+Proyecto_4_APIS/
 |-- streaming-api/
 |-- social-media-api/
 |-- open-data-api/
 |-- geolocation-api/
 |-- README.md
 ```
+
+Each folder is an independent mini project with its own:
+
+- `index.js`
+- `package.json`
+- `README.md`
+- `public/` folder for the frontend
+
+## Installation
+
+1. Make sure Node.js 18 or newer is installed.
+2. Open this repository in a terminal.
+3. Enter the folder of the mini project you want to run.
+
+Example:
+
+```bash
+cd streaming-api
+```
+
+## Execution Instructions
+
+Each project runs independently. Start each one from its own folder with:
+
+```bash
+npm start
+```
+
+Then open the corresponding local URL in your browser.
+
+### Run `streaming-api`
+
+```bash
+cd streaming-api
+npm start
+```
+
+Open:
+
+```text
+http://localhost:3000
+```
+
+### Run `social-media-api`
+
+```bash
+cd social-media-api
+npm start
+```
+
+Open:
+
+```text
+http://localhost:3001
+```
+
+### Run `open-data-api`
+
+```bash
+cd open-data-api
+npm start
+```
+
+Open:
+
+```text
+http://localhost:3002
+```
+
+### Run `geolocation-api`
+
+```bash
+cd geolocation-api
+npm start
+```
+
+Open:
+
+```text
+http://localhost:3003
+```
+
+## Notes
+
+- All projects use asynchronous requests to consume live API data.
+- Each mini project was kept independent to satisfy the repository structure requested in the assignment.
+- The folders `work/` and `outputs/` are not part of the deliverable logic.
+
+## Author
+
+- Student project for API Integration and Service Architecture
