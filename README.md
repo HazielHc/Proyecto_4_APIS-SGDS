@@ -190,13 +190,3 @@ Open:
 ```text
 http://localhost:3003
 ```
-
-## Notes
-
-- All projects use asynchronous requests to consume live API data.
-- Each mini project was kept independent to satisfy the repository structure requested in the assignment.
-- The folders `work/` and `outputs/` are not part of the deliverable logic.
-
-## Author
-
-- Student project for API Integration and Service Architecture
